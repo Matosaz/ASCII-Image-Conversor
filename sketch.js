@@ -1,10 +1,10 @@
 let sourceText;
 let poem;
-let gloria;
+let cat;
 let startIndex = 0;
 
 function preload(){
-    gloria = loadImage("cat48.jpg");
+    cat = loadImage("cat48.jpg");
     sourceText = loadStrings("cat.txt");
 }
 
@@ -22,16 +22,16 @@ function draw(){
 
 
     let charIndex = startIndex;
-    let w = width / gloria.width;
-    let h = height / gloria.height;
+    let w = width / cat.width;
+    let h = height / cat.height;
     gloria.loadPixels();
         
-        for (let j = 0; j < gloria.height; j++){
-            for(let i = 0; i < gloria.width; i++){
+        for (let j = 0; j < cat.height; j++){
+            for(let i = 0; i < cat.width; i++){
                 const pixelIndex = (i + j * gloria.width) * 4;
-                const r = gloria.pixels[pixelIndex + 0];
-                const g = gloria.pixels[pixelIndex + 1];
-                const b = gloria.pixels[pixelIndex + 2];
+                const r = cat.pixels[pixelIndex + 0];
+                const g = cat.pixels[pixelIndex + 1];
+                const b = cat.pixels[pixelIndex + 2];
                 const avg = (r + g + b) / 3;
 
                 noStroke();
