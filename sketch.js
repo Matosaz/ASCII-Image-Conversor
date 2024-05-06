@@ -11,24 +11,22 @@ function preload(){
 function setup(){
     createCanvas(700, 700);
     poem = sourceText.join(' ');
-    textFont("Courier-Bound");
-    text
-    
 }
 
 function draw(){
     background(0);
     frameRate(10);
 
+    cat.loadPixels();
+
 
     let charIndex = startIndex;
     let w = width / cat.width;
     let h = height / cat.height;
-    gloria.loadPixels();
         
         for (let j = 0; j < cat.height; j++){
             for(let i = 0; i < cat.width; i++){
-                const pixelIndex = (i + j * gloria.width) * 4;
+                const pixelIndex = (i + j * cat.width) * 4;
                 const r = cat.pixels[pixelIndex + 0];
                 const g = cat.pixels[pixelIndex + 1];
                 const b = cat.pixels[pixelIndex + 2];
